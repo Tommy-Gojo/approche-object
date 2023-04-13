@@ -20,6 +20,7 @@ public class TestOperation {
 		for (int i = 0; i < ope.length; i++) {
 			Operation operation = ope[i];
 			System.out.println(ope[i]);
+			int Montant = getMontant();
 			if(ope[i].getType().equals("DEBIT")) {
 				
 			}
