@@ -20,11 +20,13 @@ public class TestOperation {
 		for (int i = 0; i < ope.length; i++) {
 			Operation operation = ope[i];
 			if(ope[i].getType().equals("DEBIT")) {
+				System.out.println("Le solde est à "+Total);
 				Total -= ope[i].getMontant();
-				System.out.println(Total);			
+				System.out.println("J'enleve "+ope[i].getMontant()+" ce qui nous fait "+Total);			
 			}else {
+				System.out.println("Le solde est à "+Total);
 				Total += ope[i].getMontant();
-				System.out.println(Total);
+				System.out.println("Je rajoute "+ope[i].getMontant()+" ce qui nous fait "+Total);
 			}
 		}
 	}
