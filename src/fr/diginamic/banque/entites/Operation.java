@@ -18,6 +18,7 @@ public abstract class Operation {
 	}
 	
 	public abstract String getType();
+	
 	public int getMontant() {
 		return MontOfOp;
 	}

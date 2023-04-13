@@ -16,13 +16,15 @@ public class TestOperation {
 		Credit c2 = new Credit("34", 44);
 		
 		Operation[] ope = {d1, c1, d2, c2};
-		
+		int Total = 0;
 		for (int i = 0; i < ope.length; i++) {
 			Operation operation = ope[i];
-			System.out.println(ope[i]);
-			int Montant = getMontant();
 			if(ope[i].getType().equals("DEBIT")) {
-				
+				Total -= ope[i].getMontant();
+				System.out.println(Total);			
+			}else {
+				Total += ope[i].getMontant();
+				System.out.println(Total);
 			}
 		}
 	}
