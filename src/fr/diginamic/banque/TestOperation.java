@@ -18,7 +18,6 @@ public class TestOperation {
 		Operation[] ope = {d1, c1, d2, c2};
 		int Total = 0;
 		for (int i = 0; i < ope.length; i++) {
-			Operation operation = ope[i];
 			if(ope[i].getType().equals("DEBIT")) {
 				System.out.println("Le solde est à "+Total);
 				Total -= ope[i].getMontant();
