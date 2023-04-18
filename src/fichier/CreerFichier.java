@@ -12,8 +12,8 @@ import java.util.List;
 public class CreerFichier {
 		public static void main (String[] args) throws IOException {
 			
-			Path pathFile = Paths.get("C:\\Users\\Serena Loury\\Desktop\\recensement.csv");
-			Path pathCible = Paths.get("C:\\Users\\Serena Loury\\Desktop\\recensement100er.txt");
+			Path pathFile = Paths.get("C:\\Users\\Utilisateur\\Desktop\\recensement.csv");
+			Path pathCible = Paths.get("C:\\Users\\Utilisateur\\Desktop\\villesplusde25khabi");
 			boolean exists = Files.exists(pathFile);
 			if(exists) {
 				List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
