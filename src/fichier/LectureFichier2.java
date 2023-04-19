@@ -15,36 +15,43 @@ public class LectureFichier2 {
 	
 
 	public static void main (String[] args) throws IOException {
-		ArrayList<String> listeVille = new ArrayList<>();
-		Path pathFile = Paths.get("C:\\Users\\Utilisateur\\Desktop\\recensement.csv");
-		Path pathCible = Paths.get("C:\\Users\\Utilisateur\\Desktop\\villes25.csv");
-		List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
-		boolean exists = Files.exists(pathFile);
+//		ArrayList<String> listeVille = new ArrayList<>();
+//		Path pathFile = Paths.get("C:\\Users\\Utilisateur\\Desktop\\recensement.csv");
+//		Path pathCible = Paths.get("C:\\Users\\Utilisateur\\Desktop\\villes25.csv");
+//		List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
+//		boolean exists = Files.exists(pathFile);
 		
-		if(exists) {
-			
-			for(int i  = 1; i < lines.size(); i++) {
-				
-				
-				String[] tokens = lines.get(i).split(";");
-				int nb = Integer.parseInt(tokens[9].replaceAll(" ",""));
-				
-				Ville ville = new Ville(tokens[6],tokens[2],tokens[1],nb);
-				if(ville.getNbrPop() >= 25000) {
-					listeVille.add(ville.getNom() + ";" + ville.getNbrPop() );
-				}
-				// listeVille.add(ville);
-				
-	
-
-				
-			}
-			
-			Files.write(pathCible, listeVille);
-			
-			
+//		if(exists) {
+//			
+//			for(int i  = 1; i < lines.size(); i++) {
+//				
+//				
+//				String[] tokens = lines.get(i).split(";");
+//				int nb = Integer.parseInt(tokens[9].replaceAll(" ",""));
+//				
+//				Ville ville = new Ville(tokens[6],tokens[2],tokens[1],nb);
+//				if(ville.getNbrPop() >= 25000) {
+//					listeVille.add(ville.getNom() + ";" + ville.getNbrPop() );
+//				}
+//				// listeVille.add(ville);
+//				
+//	
+//
+//				
+//			}
+//			
+//			Files.write(pathCible, listeVille);
+//			
+//			
+//		}else {
+//			System.out.println("Erreur: Le fichier n'existe pas");
+//		}
+		Ville ville1 = new Ville("3","3","3",3);
+		Ville ville2 = new Ville("3","3","3",3);
+		if(ville1 == ville2) {
+			System.out.println("egal");
 		}else {
-			System.out.println("Erreur: Le fichier n'existe pas");
+			System.out.println("pas egal");
 		}
 	}
 
