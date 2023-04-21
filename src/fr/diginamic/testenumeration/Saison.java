@@ -7,42 +7,49 @@ public enum Saison {
 	AUTOMNE("Automne", 3),
 	HIVER("Hiver", 4);
 	
-	private static String nom;
+//	private String nom;
+	private String libelle;
 	private int order;
 	
-	 
 	
-	private Saison(int order) {
+	private Saison(String libelle, int order) {
 		this.order = order;
+		this.libelle = libelle;
 	}
-
-
-
-	public static String getNom() {
-		return nom;
-	}
-
-
-
-	public static void setNom(String nom) {
-		Saison.nom = nom;
-	}
-
-
+	
+	
 
 	public int getOrder() {
 		return order;
 	}
-
-
-
 	public void setOrder(int order) {
 		this.order = order;
 	}
-
-
-
-	public String returnS (String nom) {
-		return Saison.nom;
+//	public String getNom() {
+//		return nom;
+//	}
+	public String getLibelle() {
+		return libelle;
 	}
+//	public void setNom(String nom) {
+//		this.nom = nom;
+//	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+	
+	
+	public static Saison getSaisonByLibelle(String libelle) {
+        for (Saison saison : Saison.values()) {
+            if (saison.libelle.equalsIgnoreCase(libelle)) {
+                return saison;
+            }
+        }
+        return null;
+    }
+	
+
+
+
+	
 }
